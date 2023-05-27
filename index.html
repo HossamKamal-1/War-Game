@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple War Game</title>
+  <!-- Font Awesome Library CSS File -->
+  <link rel="stylesheet" href="css/all.min.css" />
+  <!-- Bootstrap CSS File -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- Main CSS File -->
+  <link rel="stylesheet" href="css/main.css" />
+  <!-----------Scripts------------->
+  <script src="main.js" defer></script>
+</head>
+
+<body class="bg-dark min-vh-100 p-2 d-flex align-items-center justify-content-center">
+  <!-- Start Game -->
+  <div class="game">
+    <div class="container">
+      <div class="row gy-3 gy-md-0">
+        <div class="col-md">
+          <div class="game-card bg-white p-3 rounded h-100" data-player="Son Goku">
+            <div class="health bg-secondary position-relative rounded overflow-hidden">
+              <!-- js -->
+              <span class="health-bar bg-primary positon-absolute start-0 top-0 h-100 d-block" data-player="Son Goku">
+              </span>
+            </div>
+            <div class="player-info text-center my-3">
+              <span class="player-name fs-3">Son Goku</span>
+              <div class="player-image mt-2 px-3">
+                <img src="images/goku.png" alt="player image" class="rounded img-fluid" />
+              </div>
+            </div>
+            <div class="player-actions d-flex align-items-center justify-content-center gap-2">
+              <button type="button" class="btn btn-danger px-lg-5 attack-btn" data-player="Son Goku">
+                <!-- js -->
+                <i class="fa-solid fa-hand-fist me-2"></i>
+                Attack
+              </button>
+              <button type="button" class="btn btn-primary px-lg-5 heal-btn" data-player="Son Goku">
+                <!-- js -->
+                <i class="fa-solid fa-heart-circle-plus me-2"></i>
+                Heal
+              </button>
+            </div>
+            <div class="game-result text-center fw-bold text-uppercase mt-4 d-none" data-player="Son Goku">
+              <!-- js -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="game-card bg-white p-3 rounded h-100">
+            <div class="health bg-secondary position-relative rounded overflow-hidden">
+              <span class="health-bar bg-primary positon-absolute start-0 top-0 h-100 d-block" data-player="Goku Black">
+              </span>
+            </div>
+            <div class="player-info text-center my-3">
+              <span class="player-name fs-3">Goku Black</span>
+              <div class="player-image mt-2 px-3">
+                <img src="images/gokublack.jpg" alt="player image" class="rounded img-fluid" />
+              </div>
+            </div>
+            <div class="player-actions d-flex align-items-center justify-content-center gap-2">
+              <button type="button" class="btn btn-danger px-lg-5 attack-btn" data-player="Goku Black">
+                <i class="fa-solid fa-hand-fist me-2"></i>
+                Attack
+              </button>
+              <button type="button" class="btn btn-primary px-lg-5 heal-btn" data-player="Goku Black">
+                <i class="fa-solid fa-heart-circle-plus me-2"></i>
+                Heal
+              </button>
+            </div>
+            <div class="game-result text-center fw-bold text-uppercase mt-4 d-none"
+              data-player="Goku Black">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Game -->
+</body>
+
+</html>
